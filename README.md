@@ -11,3 +11,7 @@ Sources:
 - https://www.browserstack.com/guide/what-is-test-driven-development
 - https://study.com/learn/lesson/test-driven-development-tdd-meaning-advantages-disadvantages.html
 - ChatGPT
+
+**Test cases for Group Project - Blue Surf:**
+- https://github.com/ECE444-2023Fall/Blue-Surf/blob/91e9306449d03d847c65ea558f67adb9e7767fe7/src/components/SearchBar.test.js#L35-L39
+- https://github.com/ECE444-2023Fall/Blue-Surf/blob/91e9306449d03d847c65ea558f67adb9e7767fe7/src/App.test.js#L10-L14
