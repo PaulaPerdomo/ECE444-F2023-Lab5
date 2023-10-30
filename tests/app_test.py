@@ -84,3 +84,17 @@ def test_delete_message(client):
     rv = client.get("/delete/1")
     data = json.loads(rv.data)
     assert data["status"] == 1
+
+# Added code to test the /search route. Bugs fixed with the help of ChatGPT
+def test_search(client):
+    """Test the search route with minimal data."""
+    login(client, app.config["USERNAME"], app.config["PASSWORD"])
+    client.post(
+        "/add",
+        data=dict(title="SampleTitle", text="SampleContent"),
+        follow_redirects=True,
+    )
+    rv = client.get("/search/?query=SampleTitle", content_type="html/text")
+    assert b"SampleTitle" in rv.data
+    rv = client.get("/search/?query=NonExistent", content_type="html/text")
+    assert b"SampleTitle" not in rv.data
